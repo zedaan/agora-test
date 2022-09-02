@@ -112,6 +112,7 @@ const AgoraRTCPage = () => {
     client.leave(
       () => {
         console.log("Leave channel successfully");
+        localStorage.removeItem("token");
         navigate("/");
       },
       (err: any) => {
