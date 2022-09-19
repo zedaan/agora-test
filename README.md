@@ -50,13 +50,17 @@ This section shows you how to deploy a token server on Heroku.
 
 2. Click **Deploy app.** Heroku configures and builds the token server. 
     You see a message 'Your app was successfully deployed.'
+    
 3. Click **View.**
     Heroku opens the token server URL in your browser. The URL is of the form `<app-name>.herokuapp.com`
     where `<app-name>` is the name you chose for your token server.
     Don’t worry if you see `404 page not found` in your browser. Follow the next steps and test
     your server.
+
 4. Test your server
+
     * Ping the server
+
         Load the following URL in a browser tab. Replace `<app-name>` with the name of your server.
 
         `1 https://<app-name>.herokuapp.com/ping`
@@ -64,14 +68,18 @@ This section shows you how to deploy a token server on Heroku.
 
         `1 {"message": "pong"}`
     * Retrieve a token
+
     To retrieve an RTC token, send a request to the token server using a URL based on the
     **Token server GET request structure:**
 
     ` 1 /rtc/:channelName/:role/:tokentype/:uid/?expiry=expireTime`
+
     For example: `https://my-token-server.herokuapp.` 
+
     Your token server returns the following JSON object to your browser:
 
     `1 {"rtcToken":"ThisIsAnExampleTokenThisIsAnExampleTokenThisIsAnExampleT`
+
     To see how to create a token generator inside your IAM system, see **Integrate a token generator.**
 
 
