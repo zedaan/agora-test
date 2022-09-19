@@ -43,21 +43,21 @@ In the Get Started project you implemented, the app uses an authentication token
 This section shows you how to deploy a token server on Heroku.
 
 1. Click here and deploy a token server to Heroku.
-    Heroku retrieves the project code and necessary files from Github and takes you to a Create New App page. On this page, fill in the following information:
-    * app-name: A name for your token server, containing only lowercase letters, numbers, and dashes.
-    * APP_CERTIFICATE: The obtained from Agora Console
-    * The [App ID](http://localhost:3000) obtained from Agora Console
+    Heroku retrieves the project code and necessary files from Github and takes you to a **Create New App** page. On this page, fill in the following information:
+    * `app-name:` A name for your token server, containing only lowercase letters, numbers, and dashes.
+    * `APP_CERTIFICATE:` The obtained from Agora Console
+    * The `APP_ID:` [App ID](http://localhost:3000) obtained from Agora Console
 
 2. Click **Deploy app.** Heroku configures and builds the token server. 
     You see a message 'Your app was successfully deployed.'
 3. Click **View.**
-    Heroku opens the token server URL in your browser. The URL is of the form
-    where <app-name> is the name you chose for your token server.
-    Don’t worry if you see 404 page not found in your browser. Follow the next steps and test
+    Heroku opens the token server URL in your browser. The URL is of the form `<app-name>.herokuapp.com`
+    where `<app-name>` is the name you chose for your token server.
+    Don’t worry if you see `404 page not found` in your browser. Follow the next steps and test
     your server.
 4. Test your server
     * Ping the server
-        Load the following URL in a browser tab. Replace <app-name> with the name of your server.
+        Load the following URL in a browser tab. Replace `<app-name>` with the name of your server.
 
 
 
