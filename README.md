@@ -9,7 +9,7 @@ the server, and use it to connect securely to a specific Video Calling channel.
 An authentication token is a dynamic key that is valid for a maximum of 24 hours. On request, a token server returns an authentication token that is valid to join a specific channel.
 When users attempt to connect to an Agora channel from your app, your app retrieves a token from the token server in your security infrastructure. Your app then sends this token to Agora SD- RTN for authentication. Agora SD-RTN validates the token and reads the user and project information stored in the token. A token contains the following information:
 
-* The [App ID](http://localhost:3000) App ID of your Agora project
+* The [App ID](http://localhost:3000) App ID \of your Agora project
 * The [App certificate](http://localhost:3000) 
 * The channel name
 * The user ID of the user to be authenticated (optional)
@@ -44,8 +44,28 @@ This section shows you how to deploy a token server on Heroku.
 
 1. Click here and deploy a token server to Heroku.
     Heroku retrieves the project code and necessary files from Github and takes you to a Create New App page. On this page, fill in the following information:
-    i. app-name: A name for your token server, containing only lowercase letters, numbers, and dashes.
-    ii. APP_CERTIFICATE:
+    * app-name: A name for your token server, containing only lowercase letters, numbers, and dashes.
+    * APP_CERTIFICATE: The obtained from Agora Console
+    * The [App ID](http://localhost:3000) obtained from Agora Console
+
+2. Click Deploy app. Heroku configures and builds the token server. 
+    You see a message 'Your app was successfully deployed.'
+3. Click View.
+    Heroku opens the token server URL in your browser. The URL is of the form
+    where <app-name> is the name you chose for your token server.   
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
