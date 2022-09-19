@@ -50,10 +50,11 @@ This section shows you how to deploy a token server on Heroku.
 
 2. Click **Deploy app.** Heroku configures and builds the token server. 
     You see a message 'Your app was successfully deployed.'
-    
+
 3. Click **View.**
     Heroku opens the token server URL in your browser. The URL is of the form `<app-name>.herokuapp.com`
     where `<app-name>` is the name you chose for your token server.
+   
     Don’t worry if you see `404 page not found` in your browser. Follow the next steps and test
     your server.
 
@@ -64,12 +65,15 @@ This section shows you how to deploy a token server on Heroku.
         Load the following URL in a browser tab. Replace `<app-name>` with the name of your server.
 
         `1 https://<app-name>.herokuapp.com/ping`
+
         You see the following message in your browser:
 
         `1 {"message": "pong"}`
+
     * Retrieve a token
 
     To retrieve an RTC token, send a request to the token server using a URL based on the
+   
     **Token server GET request structure:**
 
     ` 1 /rtc/:channelName/:role/:tokentype/:uid/?expiry=expireTime`
@@ -80,10 +84,31 @@ This section shows you how to deploy a token server on Heroku.
 
     `1 {"rtcToken":"ThisIsAnExampleTokenThisIsAnExampleTokenThisIsAnExampleT`
 
-    To see how to create a token generator inside your IAM system, see **Integrate a token generator.**
+    To see how to create a token generator inside your IAM system, see **[Integrate a token generator.]**(http://localhost:3000)
 
+# Retrieve and use tokens from a token server
+To integrate authentication into an app:
 
+1. **Add the necessary dependencies**
+    In order to make HTTPS calls to a token server and interpret the JSON return parameters, integrate a HTTP client into your app. In agora_project, open a command prompt, then run the following command.
 
+    `1 npm install axios`
+
+2. **Import the HTTP client library**
+    To access the axios HTTP client from your project, add the following line at the beginning of the file `main.js`:
+
+    `1 import axios from "axios"`
+
+3. **Enable the user to specify a channel**
+    Add a text box to the user interface. Open `index.html` and add the following code before `<button type="button" id="join">`.
+
+    `1 <input type="text" id="textbox"/>`
+
+4. Add variables for your connection to the token server
+   Declare the variables you need to specify the token-server url and the token expire time. In
+
+   Code need to add ..... 
+5.  
 
 
 
